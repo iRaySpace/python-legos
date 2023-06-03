@@ -1,11 +1,11 @@
-Todo CLI
+# Todo CLI
 
-Installation
+## Installation
 ```
 poetry install
 ```
 
-Usage
+## Usage
 ```bash
 python -m todo_cli add "Buy groceries"
 # {'id': '8cc11f36-f467-4880-b520-818a2ff2ef58', 'title': 'Buy groceries', 'completed': False}
