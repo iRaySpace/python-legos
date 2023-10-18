@@ -141,8 +141,10 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# todo
-data.json
+# pdf files 
+*.pdf
+res/
 
-logs
-*.log
+# log files
+logs/
+output/
