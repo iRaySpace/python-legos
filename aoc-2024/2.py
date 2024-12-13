@@ -21,14 +21,14 @@ def is_safe(numbers):
 
 def main():
     safe_numbers = 0
-    numbers = []
+    line_numbers = []
     with open('./res/2', 'r') as file:
         for line in file:
             line = line.strip()
             numbers = [int(x) for x in line.split(' ')]
             if is_safe(numbers):
                 safe_numbers = safe_numbers + 1
-    print(safe_numbers)
+            line_numbers.append(numbers)
 
 
 if __name__ == '__main__':
