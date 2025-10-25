@@ -1,0 +1,24 @@
+PUT hotels
+{
+    "mappings": {
+        "properties": {
+            "name": { "type": "text" },
+            "city": { "type": "keyword" }
+        }   
+    }
+}
+
+POST hotels/_doc
+{
+    "name": "Sea Breeze Resort",
+    "city": "Cebu"
+}
+
+GET hotels/_search
+{
+    "query": {
+        "match": {
+            "name": "Sea"
+        }
+    }
+}

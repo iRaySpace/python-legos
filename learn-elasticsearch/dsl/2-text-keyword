@@ -1,0 +1,34 @@
+PUT hotels_v2
+{
+    "mappings": {
+        "properties": {
+            "name": { "type": "keyword" },
+            "city": {
+                "type": "text",
+                "fields": {
+                    "keyword": { "type": "keyword" }
+                }
+            }
+        }
+    }
+}
+
+POST _reindex
+{
+    "source": {
+        "index": "hotels"
+    },
+    "dest": {
+        "index": "hotels_v2"
+    }
+}
+
+DELETE hotels
+
+// Only on keywords
+GET hotels_v2/_search
+{
+    "sort": [
+        { "name": "asc" }
+    ]
+}

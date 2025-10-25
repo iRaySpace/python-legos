@@ -1,0 +1,11 @@
+GET hotels_v2/_search
+{
+    "query": {
+        "must": [
+            { "match": { "city": "Cebu" } }
+        ],
+        "filter": [
+            { "range": { "price_per_night": { "lte": 1000 } } }
+        ]
+    }
+}

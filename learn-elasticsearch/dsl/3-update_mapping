@@ -1,0 +1,19 @@
+PUT hotels_v2/_mapping
+{
+    "properties": {
+        "rating": {
+            "type": "float"
+        },
+        "price_per_night": {
+            "type": "float"
+        }
+    }
+}
+
+POST hotels_v2/_update/saweGpoBgqBGnuxLqbpY
+{
+    "doc": {
+        "rating": 4.3,
+        "price_per_night": 1500
+    }
+}
